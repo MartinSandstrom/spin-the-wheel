@@ -1,0 +1,107 @@
+.App {
+    text-align: center;
+}
+
+.App-header {
+    background-color: #222;
+    height: 70px;
+    padding: 10px;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.wheel-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+
+.wheel {
+    position: relative;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background: green;
+    display: inline-block;
+}
+
+.wheel-stop {
+    position: absolute;
+    z-index: 1;
+    top: -11px;
+    right: 39%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #f00;
+}
+
+.wheel-number {
+    position: absolute;
+    font-size: 30px;
+}
+
+.wheel-one {
+    right: 45%;
+    top: 4%;
+}
+
+.wheel-two {
+    right: 23%;
+    top: 12%;
+    transform: rotate(36deg);
+}
+
+.wheel-three {
+    right: 10%;
+    top: 31%;
+    transform: rotate(72deg);
+}
+
+.wheel-four {
+    right: 10%;
+    top: 53%;
+    transform: rotate(108deg);
+}
+
+.wheel-five {
+    right: 24%;
+    top: 72%;
+    transform: rotate(144deg);
+}
+
+.wheel-six {
+    right: 47%;
+    top: 78%;
+    transform: rotate(180deg);
+}
+
+.wheel-seven {
+    right: 68%;
+    top: 70%;
+    transform: rotate(216deg);
+}
+
+.wheel-eight {
+    right: 81%;
+    top: 52%;
+    transform: rotate(252deg);
+}
+
+.wheel-nine {
+    right: 80%;
+    top: 29%;
+    transform: rotate(288deg);
+}
+
+.wheel-ten {
+    right: 63%;
+    top: 12%;
+    transform: rotate(324deg);
+}
