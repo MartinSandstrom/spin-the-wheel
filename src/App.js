@@ -20,7 +20,7 @@ class App extends Component {
     super();
     this.state = {
       winningSpins: [],
-      spinDuration: 6,
+      spinDuration: 7,
       isSpinning: false
     };
   }
@@ -48,21 +48,24 @@ class App extends Component {
     let negativeOrPositive = backwards ? -1 : 1;
     console.log(negativeOrPositive);
 
-    let first = (0 + degrees) * negativeOrPositive;
-    let second = (180 + degrees) * negativeOrPositive;
-    let third = (360 + degrees) * negativeOrPositive;
-    let fourth = (540 + degrees) * negativeOrPositive;
-    let fifth = (720 + degrees) * negativeOrPositive;
-
-    console.log('DEGREES FAKTISKA; ', fifth);
-
+    /*
+        let keyframes =
+      `@-webkit-keyframes ${animationName} {
+        0% {-webkit-transform: rotate(${(0 + degrees) * negativeOrPositive}deg)}
+        10% {-webkit-transform: rotate(${(360 + degrees) * negativeOrPositive}deg)}
+        30% {-webkit-transform: rotate(${(720 + degrees) * negativeOrPositive}deg)}
+        55% {-webkit-transform: rotate(${(1080 + degrees) * negativeOrPositive}deg)}
+        100% {-webkit-transform: rotate(${(1440 + degrees) * negativeOrPositive}deg)}
+    }`;
+    */
     let keyframes =
       `@-webkit-keyframes ${animationName} {
-        0% {-webkit-transform: rotate(${first}deg)}
-        15% {-webkit-transform: rotate(${second}deg)}
-        35% {-webkit-transform: rotate(${third}deg)}
-        65% {-webkit-transform: rotate(${fourth}deg)}
-        100% {-webkit-transform: rotate(${fifth}deg)}
+        0% {-webkit-transform: rotate(${(0 + degrees) * negativeOrPositive}deg)}
+        10% {-webkit-transform: rotate(${(288 + degrees) * negativeOrPositive}deg)}
+        25% {-webkit-transform: rotate(${(576 + degrees) * negativeOrPositive}deg)}
+        45% {-webkit-transform: rotate(${(950 + degrees) * negativeOrPositive}deg)}
+        70% {-webkit-transform: rotate(${(1250 + degrees) * negativeOrPositive}deg)}
+        100% {-webkit-transform: rotate(${(1440 + degrees) * negativeOrPositive}deg)}
     }`;
     styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
     this.setState({ animationName });
