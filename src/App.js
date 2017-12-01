@@ -41,23 +41,8 @@ class App extends Component {
     let animationName = `animation-${actualNumber}`;
     let styleSheet = document.styleSheets[0];
     let degrees = random * 36;
-    console.log('DEGREED: ', degrees);
-    console.log('RANDOM: ', random + 1);
-    console.log('ACTUAL NUMBER: ', actualNumber);
-    console.log(backwards);
     let negativeOrPositive = backwards ? -1 : 1;
-    console.log(negativeOrPositive);
 
-    /*
-        let keyframes =
-      `@-webkit-keyframes ${animationName} {
-        0% {-webkit-transform: rotate(${(0 + degrees) * negativeOrPositive}deg)}
-        10% {-webkit-transform: rotate(${(360 + degrees) * negativeOrPositive}deg)}
-        30% {-webkit-transform: rotate(${(720 + degrees) * negativeOrPositive}deg)}
-        55% {-webkit-transform: rotate(${(1080 + degrees) * negativeOrPositive}deg)}
-        100% {-webkit-transform: rotate(${(1440 + degrees) * negativeOrPositive}deg)}
-    }`;
-    */
     let keyframes =
       `@-webkit-keyframes ${animationName} {
         0% {-webkit-transform: rotate(${(0 + degrees) * negativeOrPositive}deg)}
@@ -83,13 +68,9 @@ class App extends Component {
   onSwipe = (e) => {
     let direction = e.direction;
     if (direction === 16) {
-      //SWIPED DOWN
-      console.log('SWIPED DOWN');
       this.spin(false);
     }
     else if (direction === 8) {
-      //SWIPED UP
-      console.log('SWIPED UP');
       this.spin(true);
     }
   }
@@ -104,7 +85,7 @@ class App extends Component {
       animationDirection: 'normal',
       animationFillMode: 'forwards'
     }
-    let winnings = this.state.winningSpins.map((win, index) => (<p key={index}> {win}</p>));
+    let winnings = this.state.winningSpins.map((win, index) => (<span key={index}> {win} </span>));
 
     return (
       <div className="App">
@@ -115,6 +96,7 @@ class App extends Component {
           <Hammer onSwipe={this.onSwipe} direction="DIRECTION_VERTICAL">
             <div className="wheel-container">
               <div className="wheel-stop"></div>
+              <div className="wheel-mark"></div>
               <div className="wheel" style={style}>
                 <div className="wheel-number wheel-one">1</div>
                 <div className="wheel-number wheel-two">2</div>
@@ -125,7 +107,7 @@ class App extends Component {
                 <div className="wheel-number wheel-seven">7</div>
                 <div className="wheel-number wheel-eight">8</div>
                 <div className="wheel-number wheel-nine">9</div>
-                <div className="wheel-number wheel-ten">10</div>
+                <div className="wheel-number wheel-ten" >10</div>
               </div>
               <img src="./pointer.png" className="pointer" alt="pointer"></img>
             </div>
