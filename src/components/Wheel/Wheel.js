@@ -84,28 +84,26 @@ export default class Wheel extends Component {
             animationFillMode: 'forwards'
         }
         return (
-            <div>
-                <div className="app-intro">
-                    <Hammer onSwipe={this.onSwipe} direction="DIRECTION_VERTICAL">
-                        <div className="wheel-container">
-                            <div className="wheel-stop"></div>
-                            <div className="wheel-mark"></div>
-                            <div className="wheel" style={style}>
-                                <div className="wheel-number wheel-one">1</div>
-                                <div className="wheel-number wheel-two">2</div>
-                                <div className="wheel-number wheel-three">3</div>
-                                <div className="wheel-number wheel-four">4</div>
-                                <div className="wheel-number wheel-five">5</div>
-                                <div className="wheel-number wheel-six">6</div>
-                                <div className="wheel-number wheel-seven">7</div>
-                                <div className="wheel-number wheel-eight">8</div>
-                                <div className="wheel-number wheel-nine">9</div>
-                                <div className="wheel-number wheel-ten" >10</div>
-                            </div>
-                            <img src="./pointer.png" className="pointer" alt="pointer"></img>
+            <div className="wheel-component">
+                <Hammer onSwipe={this.onSwipe} direction="DIRECTION_VERTICAL">
+                    <div className="wheel-container">
+                        <div className="wheel-stop"></div>
+                        <div className="wheel-mark"></div>
+                        <div className="wheel" style={style}>
+                            <div className="wheel-number wheel-one">1</div>
+                            <div className="wheel-number wheel-two">2</div>
+                            <div className="wheel-number wheel-three">3</div>
+                            <div className="wheel-number wheel-four">4</div>
+                            <div className="wheel-number wheel-five">5</div>
+                            <div className="wheel-number wheel-six">6</div>
+                            <div className="wheel-number wheel-seven">7</div>
+                            <div className="wheel-number wheel-eight">8</div>
+                            <div className="wheel-number wheel-nine">9</div>
+                            <div className="wheel-number wheel-ten" >10</div>
                         </div>
-                    </Hammer>
-                </div>
+                        <img src="./pointer.png" className="pointer" alt="pointer"></img>
+                    </div>
+                </Hammer>
                 <input type="button" className="btn" value="SPIN" onClick={() => this.spin(false)} />
             </div>
         );
