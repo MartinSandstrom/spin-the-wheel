@@ -56,7 +56,7 @@ export default class Wheel extends Component {
 
 		setTimeout(() => {
 			this.showWinner(actualNumber);
-		}, this.props.spinDuration * 1000 + 300)
+		}, this.props.spinDuration * 1000 + 300);
 	}
 
 	showWinner = (number) => {
@@ -83,7 +83,7 @@ export default class Wheel extends Component {
 			animationIterationCount: 1,
 			animationDirection: 'normal',
 			animationFillMode: 'forwards'
-		}
+		};
 		return (
 			<div className="wheel-component">
 				<div>
