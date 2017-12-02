@@ -6,7 +6,7 @@ https://martinsandstrom.github.io/spin-the-wheel/
 
 
 ## Usage
-
+    
 ### Install
 
 ```console
@@ -23,3 +23,5 @@ https://martinsandstrom.github.io/spin-the-wheel/
 ### TODOS
 * Make the animation smoother.
 * Figure out why the animation some times don't fire
+* Static hostingen
+* Testning
