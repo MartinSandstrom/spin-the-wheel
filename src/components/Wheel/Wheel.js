@@ -19,7 +19,6 @@ export default class Wheel extends Component {
     constructor() {
         super();
         this.state = {
-            spinDuration: 7,
             isSpinning: false
         };
     }
@@ -30,6 +29,7 @@ export default class Wheel extends Component {
         }
         this.setState({ isSpinning: true });
         let random = Math.floor(Math.random() * 9);
+        let degrees = random * 36;
         let actualNumber = random + 1;
 
         //Handle forward spins 
@@ -39,7 +39,6 @@ export default class Wheel extends Component {
 
         let animationName = `animation-${actualNumber}`;
         let styleSheet = document.styleSheets[0];
-        let degrees = random * 36;
         let negativeOrPositive = backwards ? -1 : 1;
 
         let keyframes =
@@ -51,11 +50,13 @@ export default class Wheel extends Component {
             70% {-webkit-transform: rotate(${(1250 + degrees) * negativeOrPositive}deg)}
             100% {-webkit-transform: rotate(${(1440 + degrees) * negativeOrPositive}deg)}
         }`;
+
         styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
         this.setState({ animationName });
+
         setTimeout(() => {
             this.showWinner(actualNumber);
-        }, this.state.spinDuration * 1000 + 300)
+        }, this.props.spinDuration * 1000 + 300)
     }
 
     showWinner = (number) => {
@@ -77,7 +78,7 @@ export default class Wheel extends Component {
         let style = {
             animationName: this.state.animationName,
             animationTimingFunction: 'linear',
-            animationDuration: `${this.state.spinDuration}s`,
+            animationDuration: `${this.props.spinDuration}s`,
             animationDelay: '0.0s',
             animationIterationCount: 1,
             animationDirection: 'normal',
@@ -85,26 +86,28 @@ export default class Wheel extends Component {
         }
         return (
             <div className="wheel-component">
-                <Hammer onSwipe={this.onSwipe} direction="DIRECTION_VERTICAL">
-                    <div className="wheel-container">
-                        <div className="wheel-stop"></div>
-                        <div className="wheel-mark"></div>
-                        <div className="wheel" style={style}>
-                            <div className="wheel-number wheel-one">1</div>
-                            <div className="wheel-number wheel-two">2</div>
-                            <div className="wheel-number wheel-three">3</div>
-                            <div className="wheel-number wheel-four">4</div>
-                            <div className="wheel-number wheel-five">5</div>
-                            <div className="wheel-number wheel-six">6</div>
-                            <div className="wheel-number wheel-seven">7</div>
-                            <div className="wheel-number wheel-eight">8</div>
-                            <div className="wheel-number wheel-nine">9</div>
-                            <div className="wheel-number wheel-ten" >10</div>
+                <div>
+                    <Hammer onSwipe={this.onSwipe} direction="DIRECTION_VERTICAL">
+                        <div className="wheel-container">
+                            <div className="wheel-stop"></div>
+                            <div className="wheel-mark"></div>
+                            <div className="wheel" style={style}>
+                                <div className="wheel-number wheel-one">1</div>
+                                <div className="wheel-number wheel-two">2</div>
+                                <div className="wheel-number wheel-three">3</div>
+                                <div className="wheel-number wheel-four">4</div>
+                                <div className="wheel-number wheel-five">5</div>
+                                <div className="wheel-number wheel-six">6</div>
+                                <div className="wheel-number wheel-seven">7</div>
+                                <div className="wheel-number wheel-eight">8</div>
+                                <div className="wheel-number wheel-nine">9</div>
+                                <div className="wheel-number wheel-ten" >10</div>
+                            </div>
+                            <img src="./pointer.png" className="wheel-pointer" alt="wheel-pointer"></img>
                         </div>
-                        <img src="./pointer.png" className="pointer" alt="pointer"></img>
-                    </div>
-                </Hammer>
-                <input type="button" className="btn" value="SPIN" onClick={() => this.spin(false)} />
+                    </Hammer>
+                </div>
+                <input type="button" className="wheel-btn" value="SPIN" onClick={() => this.spin(false)} />
             </div>
         );
     }

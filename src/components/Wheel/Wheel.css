@@ -1,5 +1,5 @@
 
-.btn {
+.wheel-btn {
     border: 1px solid black;
     background-color: transparent;
     padding: 10px;
@@ -9,11 +9,11 @@
     font-size: 17px;
 }
 
-.btn:focus {
+.wheel-btn:focus {
     outline: none;
 }
 
-.pointer {
+.wheel-pointer {
     animation: MoveUpDown 1s linear infinite;
     position: absolute;
     top: 32%;

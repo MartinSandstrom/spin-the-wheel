@@ -25,7 +25,7 @@ class App extends Component {
           <h1 className="app-title">Spin the wheel</h1>
         </header>
         <div className="app-intro">
-          <Wheel onNewWinner={this.onNewWinner}></Wheel>
+          <Wheel spinDuration={7} onNewWinner={this.onNewWinner}></Wheel>
           <h2 className="app-winner-heading">
             Winners:
             </h2>
