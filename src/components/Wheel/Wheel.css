@@ -5,21 +5,35 @@
     padding: 10px;
     min-width: 200px;
     border-radius: 0;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
     font-size: 17px;
 }
 
 .wheel-btn:focus {
-    outline: none;
+     outline: none;
 }
 
 .wheel-pointer {
-    animation: MoveUpDown 1s linear infinite;
+    -webkit-animation: MoveUpDown 1s linear infinite;
+            animation: MoveUpDown 1s linear infinite;
     position: absolute;
     top: 25%;
     right: -66px;
     width: 75px;
 }
+
+@-webkit-keyframes MoveUpDown {
+    0% {
+      padding-top: -10px;
+    }
+    50% {
+      padding-top: 25px;
+    }
+    100% {
+      padding-top: 0;
+    }
+  }
 
 @keyframes MoveUpDown {
     0% {
@@ -50,7 +64,8 @@
     background: #222;
     color: white;
     display: inline-block;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 }
 
 .wheel-stop {
@@ -90,53 +105,62 @@
 .wheel-two {
     right: 23%;
     top: 12%;
-    transform: rotate(36deg);
+    -webkit-transform: rotate(36deg);
+            transform: rotate(36deg);
 }
 
 .wheel-three {
     right: 10%;
     top: 31%;
-    transform: rotate(72deg);
+    -webkit-transform: rotate(72deg);
+            transform: rotate(72deg);
 }
 
 .wheel-four {
     right: 10%;
     top: 53%;
-    transform: rotate(108deg);
+    -webkit-transform: rotate(108deg);
+            transform: rotate(108deg);
 }
 
 .wheel-five {
     right: 24%;
     top: 72%;
-    transform: rotate(144deg);
+    -webkit-transform: rotate(144deg);
+            transform: rotate(144deg);
 }
 
 .wheel-six {
     right: 45%;
     top: 78%;
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
 }
 
 .wheel-seven {
     right: 68%;
     top: 70%;
-    transform: rotate(216deg);
+    -webkit-transform: rotate(216deg);
+            transform: rotate(216deg);
 }
 
 .wheel-eight {
     right: 81%;
     top: 52%;
-    transform: rotate(252deg);
+    -webkit-transform: rotate(252deg);
+            transform: rotate(252deg);
 }
 
 .wheel-nine {
     right: 80%;
     top: 29%;
-    transform: rotate(288deg);
+    -webkit-transform: rotate(288deg);
+            transform: rotate(288deg);
 }
 
 .wheel-ten {
     right: 63%;
     top: 12%;
-    transform: rotate(324deg);
+    -webkit-transform: rotate(324deg);
+            transform: rotate(324deg);
 }

@@ -12,7 +12,8 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Wheel', () => {
     it('renders one item', () => {
-        const wrapper = shallow(<Wheel />);
+        const onNewWinner = sinon.spy();
+        const wrapper = shallow(<Wheel spinDuration={7} onNewWinner={onNewWinner}/>);
         expect(wrapper.find('.wheel-component')).to.have.length(1);
     });
 })
