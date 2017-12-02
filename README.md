@@ -1,12 +1,12 @@
 # Spin the wheel
 
 
-## Preview 
+## Preview
 https://martinsandstrom.github.io/spin-the-wheel/
 
 
 ## Usage
-    
+
 ### Clone
 
 ```console
@@ -39,9 +39,9 @@ https://martinsandstrom.github.io/spin-the-wheel/
 ### TODOS
 * Make the animation smoother.
 * Figure out why the animation some times don't fire (disabling the button and adding explaining text to clarify)
-* Testning
+* Testning, how to test when inserting CSS to DOM? Move to other solution?
 
-## Having problems running the test? 
+## Having problems running the test?
 
 ### Install watchman with homebrew
 #### https://github.com/facebook/jest/issues/1767

@@ -1,19 +1,19 @@
 .app {
-    text-align: center;    
+	text-align: center;
 }
 
 .app-header {
-    background-color: #222;
-    height: 70px;
-    padding: 10px;
-    color: white;
-    margin-bottom: 50px;
+	background-color: #222;
+	height: 70px;
+	padding: 10px;
+	color: white;
+	margin-bottom: 50px;
 }
 
 .app-title {
-    font-size: 1.5em;
+	font-size: 1.5em;
 }
 
 .app-winner-heading {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
