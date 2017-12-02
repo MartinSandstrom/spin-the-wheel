@@ -46,8 +46,8 @@ export default class Wheel extends Component {
             0% {-webkit-transform: rotate(${(0 + degrees) * negativeOrPositive}deg)}
             10% {-webkit-transform: rotate(${(288 + degrees) * negativeOrPositive}deg)}
             25% {-webkit-transform: rotate(${(576 + degrees) * negativeOrPositive}deg)}
-            45% {-webkit-transform: rotate(${(950 + degrees) * negativeOrPositive}deg)}
-            70% {-webkit-transform: rotate(${(1250 + degrees) * negativeOrPositive}deg)}
+            45% {-webkit-transform: rotate(${(900 + degrees) * negativeOrPositive}deg)}
+            75% {-webkit-transform: rotate(${(1250 + degrees) * negativeOrPositive}deg)}
             100% {-webkit-transform: rotate(${(1440 + degrees) * negativeOrPositive}deg)}
         }`;
 
