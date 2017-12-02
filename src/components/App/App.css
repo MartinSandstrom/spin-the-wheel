@@ -7,7 +7,8 @@
 	height: 70px;
 	padding: 10px;
 	color: white;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
+	padding: 10 5px;
 }
 
 .app-title {
@@ -16,4 +17,8 @@
 
 .app-winner-heading {
 	margin-bottom: 10px;
+}
+
+.app-lead {
+    margin-bottom: 20px;
 }

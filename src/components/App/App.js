@@ -3,7 +3,7 @@ import './App.css';
 import Wheel from '../Wheel/Wheel.js';
 import { WinnerBadge } from '../WinnerBadge/WinnerBadge.js';
 
-class App extends Component {
+export default class App extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -25,15 +25,16 @@ class App extends Component {
 					<h1 className="app-title">Spin the wheel</h1>
 				</header>
 				<div className="app-intro">
+					<p className="app-lead">
+						<strong>Drag the right side of the wheel up or down to spin, or simply press the button.</strong>
+					</p>
 					<Wheel spinDuration={7} onNewWinner={this.onNewWinner}></Wheel>
 					<h2 className="app-winner-heading">
 						Winners:
-            </h2>
+           			 </h2>
 					{winnings}
 				</div>
 			</div>
 		);
 	}
 }
-
-export default App;
