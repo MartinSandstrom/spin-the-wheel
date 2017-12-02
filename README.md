@@ -7,6 +7,16 @@ https://martinsandstrom.github.io/spin-the-wheel/
 
 ## Usage
     
+### Clone
+
+```console
+    $ git clone https://github.com/MartinSandstrom/spin-the-wheel.git
+```
+
+```console
+    $ cd spin-the-wheel
+```
+
 ### Install
 
 ```console
