@@ -107,7 +107,11 @@ export default class Wheel extends Component {
                         </div>
                     </Hammer>
                 </div>
-                <input type="button" className="wheel-btn" value="SPIN" onClick={() => this.spin(false)} />
+                <input type="button"
+                    className="wheel-btn"
+                    disabled={this.state.isSpinning}
+                    value={`${this.state.isSpinning ? 'Wheel is spinning' : 'SPIN'}`}
+                    onClick={() => this.spin(false)}/>
             </div>
         );
     }

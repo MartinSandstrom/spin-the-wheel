@@ -29,9 +29,19 @@ https://martinsandstrom.github.io/spin-the-wheel/
     $ npm start
 ```
 
+### Run tests
+
+```console
+    $ npm test
+```
+
 
 ### TODOS
 * Make the animation smoother.
-* Figure out why the animation some times don't fire
-* Static hostingen
+* Figure out why the animation some times don't fire (disabling the button and adding explaining text to clarify)
 * Testning
+
+## Having problems running the test? 
+
+### Install watchman with homebrew
+#### https://github.com/facebook/jest/issues/1767
