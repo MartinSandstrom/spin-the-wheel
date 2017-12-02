@@ -7,4 +7,5 @@
     margin: 5px;
     font-weight: bold;
     border-radius: 5px;
+    min-width: 20px;
 }
