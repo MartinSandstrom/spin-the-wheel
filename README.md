@@ -42,8 +42,8 @@ https://martinsandstrom.github.io/spin-the-wheel/
 
 
 ### TODOS / Imporovements
-* Make the animation smoother.
-* Figure out why the animation some times don't fire on swipe(disabling the button and adding explaining text to clarify)
+* Make the animation smoother
+* Figure out why the animation sometimes don't fire on swipe(disabling the button and adding explaining text to clarify)
 * Testning, how to test when inserting CSS to DOM? Move to other solution?
-* Solvde deploy issue with filea archive not beeing in the root.
-* Calculate where on wheel swipe occured and make the wheel swipeable from all directions.
+* Solve deploy issue with site not living at root level
+* Calculate where on wheel the swipe occured and make the wheel swipeable from all directions
